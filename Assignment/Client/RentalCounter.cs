@@ -14,5 +14,10 @@ namespace Client
             totalRentalCharge += context.getRentalCharge();
             Console.WriteLine("Number of Rentals: " + rentalCount + ", Total Charge: " + totalRentalCharge);
         }
+
+        public int getRentalCount()
+        {
+            return rentalCount;
+        }
     }
 }

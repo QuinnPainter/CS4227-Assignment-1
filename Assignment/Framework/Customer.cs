@@ -21,11 +21,6 @@ namespace Framework
             rentals.Add(rental);
         }
 
-        public List<Rental> getRentals()
-        {
-            return rentals;
-        }
-
         public String statement()
         {
             String result = "Rental Record for " + getName() + "\n";
