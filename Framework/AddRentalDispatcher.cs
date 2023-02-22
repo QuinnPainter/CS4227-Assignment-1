@@ -1,7 +1,25 @@
 namespace Framework
 {
-    public class AddRentalDispatcher
+    public sealed class AddRentalDispatcher
     {
+        // Singleton pattern
+        private static AddRentalDispatcher? instance;
+
+        public static AddRentalDispatcher Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new AddRentalDispatcher();
+                }
+                return instance;
+            }
+        }
+
+        // Private constructor so object can only be used through singleton
+        private AddRentalDispatcher() {}
+
         private List<IAddRentalInterceptor> interceptors = new List<IAddRentalInterceptor>();
 
         public void registerInterceptor(IAddRentalInterceptor i)
@@ -14,7 +32,7 @@ namespace Framework
             interceptors.Remove(i);
         }
 
-        private void dispatchInterceptors()
+        public void dispatchInterceptors()
         {
             foreach (IAddRentalInterceptor i in interceptors)
             {
