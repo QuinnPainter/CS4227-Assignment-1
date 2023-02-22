@@ -11,14 +11,19 @@ namespace Framework
             this.customer = customer;
         }
 
-        public Rental getRental()
+        public string getRentalTitle()
         {
-            return rental;
+            return rental.getMovie().getTitle();
         }
 
-        public Customer getCustomer()
+        public double getRentalCharge()
         {
-            return customer;
+            return rental.getCharge();
+        }
+
+        public string getCustomerName()
+        {
+            return customer.getName();
         }
     }
 }
