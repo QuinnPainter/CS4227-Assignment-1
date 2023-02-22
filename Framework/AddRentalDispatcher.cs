@@ -32,11 +32,12 @@ namespace Framework
             interceptors.Remove(i);
         }
 
-        public void dispatchInterceptors()
+        public void dispatchInterceptors(Rental rental, Customer customer)
         {
+            AddRentalContext context = new AddRentalContext(rental, customer);
             foreach (IAddRentalInterceptor i in interceptors)
             {
-                i.onAddRental(/*context*/);
+                i.onAddRental(context);
             }
         }
     }

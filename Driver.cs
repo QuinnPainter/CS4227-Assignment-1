@@ -6,11 +6,14 @@
         {
             var app = new Client.Application();
             app.run();
-            Console.WriteLine("Hello, World!");
-            var m = new Framework.Movie("hello", Framework.Movie.CHILDREN);
-            var c = new Framework.Customer("Dave");
-            c.addRental(new Framework.Rental(m, 4));
-            Console.WriteLine(c.htmlStatement());
+
+            var movie1 = new Framework.Movie("Shrek", Framework.Movie.CHILDREN);
+            var movie2 = new Framework.Movie("Batman", Framework.Movie.NEW_RELEASE);
+            var cust1 = new Framework.Customer("Dave");
+            var cust2 = new Framework.Customer("Bob");
+            cust1.addRental(new Framework.Rental(movie1, 4));
+            cust2.addRental(new Framework.Rental(movie2, 1));
+            cust1.addRental(new Framework.Rental(movie2, 3));
         }
     }
 }

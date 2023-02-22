@@ -17,8 +17,8 @@ namespace Framework
 
         public void addRental(Rental rental)
         {
+            AddRentalDispatcher.Instance.dispatchInterceptors(rental, this);
             rentals.Add(rental);
-            AddRentalDispatcher.Instance.dispatchInterceptors();
         }
 
         public String statement()
