@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/CS4227-Assignment-1.csproj",
+                "${workspaceFolder}/Driver/Driver.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/CS4227-Assignment-1.csproj",
+                "${workspaceFolder}/Driver/Driver.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/CS4227-Assignment-1.csproj"
+                "${workspaceFolder}/Driver/Driver.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
