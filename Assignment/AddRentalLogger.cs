@@ -1,6 +1,6 @@
-using Framework;
+using MovieSystem;
 
-namespace Client
+namespace MovieSystem
 {
     // Concrete Interceptor
     // Logs all Add Rental transations to the console.

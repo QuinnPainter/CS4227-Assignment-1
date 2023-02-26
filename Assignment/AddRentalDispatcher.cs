@@ -1,4 +1,4 @@
-namespace Framework
+namespace MovieSystem
 {
     public sealed class AddRentalDispatcher
     {

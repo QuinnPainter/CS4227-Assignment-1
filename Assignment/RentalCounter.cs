@@ -1,6 +1,6 @@
-using Framework;
+using MovieSystem;
 
-namespace Client
+namespace MovieSystem
 {
     // Concrete Interceptor
     // Counts the total number of rentals added, and the total charge of all rentals.

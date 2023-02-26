@@ -1,11 +1,11 @@
-namespace Client
+namespace MovieSystem
 {
     public class Application
     {
         public void run()
         {
-            Framework.AddRentalDispatcher.Instance.registerInterceptor(new AddRentalLogger());
-            Framework.AddRentalDispatcher.Instance.registerInterceptor(new RentalCounter());
+            MovieSystem.AddRentalDispatcher.Instance.registerInterceptor(new AddRentalLogger());
+            MovieSystem.AddRentalDispatcher.Instance.registerInterceptor(new RentalCounter());
         }
     }
 }

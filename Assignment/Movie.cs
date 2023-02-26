@@ -1,4 +1,4 @@
-namespace Framework
+namespace MovieSystem
 {
     public class Movie {
         public const int REGULAR = 0;
