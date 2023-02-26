@@ -2,8 +2,8 @@
 {
     static void Main(string[] args)
     {
-        var app = new MovieSystem.Application();
-        app.run();
+        MovieSystem.AddRentalDispatcher.Instance.registerInterceptor(new MovieSystem.AddRentalLogger());
+        MovieSystem.AddRentalDispatcher.Instance.registerInterceptor(new MovieSystem.RentalCounter());
         
         var movie1 = new MovieSystem.Movie("Shrek", MovieSystem.Movie.CHILDREN);
         var movie2 = new MovieSystem.Movie("Batman", MovieSystem.Movie.NEW_RELEASE);
